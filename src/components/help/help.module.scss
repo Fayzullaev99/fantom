@@ -1,0 +1,181 @@
+.help {
+  position: relative;
+  z-index: 100;
+
+  &__box {
+    position: fixed;
+    bottom: 80px;
+    right: 70px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__dropdown {
+    height: 60px;
+    padding: 10px;
+    box-shadow: 1px 1px 1px #74CD4B;
+    background: #74CD4B;
+    z-index: 99;
+    cursor: pointer;
+    animation: button alternate .7s linear infinite;
+  }
+
+  &__button {
+    height: 60px;
+    padding: 10px;
+    background: #000;
+    box-shadow: 1px 1px 17px rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+  }
+
+  &__chat {
+    background: #74CD4B;
+  }
+
+  &__block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__form {
+    width: 690px;
+    position: relative;
+    padding: 56px 68px;
+    background: #fff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: transparent;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 20px;
+    font-size: calc(18px + (30 - 14) * ((100vw - 375px) / (1920 - 375)));
+    line-height: calc(1.2em + (1.2 - 2.8) * ((100vw - 375px) / (1920 - 375)));
+  }
+
+  &__text {
+    color: #000;
+    margin-bottom: 36px;
+    font-size: calc(16px + (20 - 14) * ((100vw - 375px) / (1920 - 375)));
+    line-height: calc(1.3em + (1.5 - 1.8) * ((100vw - 375px) / (1920 - 375)));
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 40px !important;
+
+    label {
+      color: #000 !important;
+    }
+
+    textarea::placeholder {
+      color: #000 !important;
+    }
+  }
+
+  &__send {
+    padding: 10px 50px;
+    background: #74CD4B;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+
+
+.help {
+  @media (max-width:1250px) {
+    &__form {
+      width: 500px;
+      padding: 40px;
+    }
+
+    &__box {
+      width: 50px;
+      gap: 15px;
+      right: 50px;
+      bottom: 40px;
+    }
+
+    &__dropdown,
+    &__button{
+      height: 50px;
+    }
+
+    &__input {
+      margin-bottom: 15px !important;
+    }
+  }
+
+  @media (max-width:850px) {
+    &__close {
+      top: 25px;
+      right: 25px;
+      font-size: 25px;
+    }
+
+    &__input{
+      margin-bottom: 45px !important;
+    }
+    .help__input:nth-child(6){
+      display: none !important;
+    }
+    .help__input:nth-child(7){
+      display: none !important;
+    }
+    &__send {
+      padding: 5px 30px;
+      margin-top: 10px;
+      font-size: calc(16px + (20 - 14) * ((100vw - 375px) / (1920 - 375)));
+    }
+  }
+
+  @media (max-width:650px) {
+    &__form {
+      width: 350px;
+      padding: 40px;
+    }
+    &__input{
+      margin-bottom: 30px !important;
+    }
+  }
+}
+@keyframes button {
+  100% {
+    box-shadow: 1px 1px 17px #74CD4B;
+  }
+}

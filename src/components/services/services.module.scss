@@ -1,0 +1,113 @@
+.services {
+    margin-top: 10vh;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        grid-gap: 30px;
+        margin-bottom: 25px;
+        justify-content: space-around;
+    }
+
+    &__block {
+        width: 100%;
+        padding: 80px 0;
+        background: #000;
+        margin-top: 50px;
+    }
+
+    &__title {
+        font-weight: 500;
+        color: #000;
+        text-transform: uppercase;
+        font-size: calc(20px + (45 - 20) * ((100vw - 375px) / (1920 - 375)));
+        line-height: calc(1.2em + (1.2 - 2.8) * ((100vw - 375px)/(1920 - 375)));
+    }
+
+    &__text {
+        color: #000;
+        font-size: calc(18px + (30 - 18) * ((100vw - 375px) / (1920 - 375)));
+        line-height: calc(1.3em + (1.5 - 4) * ((100vw - 375px)/(1920 - 375)));
+    }
+    @media (max-width:650px) {
+        text-align: center;
+        margin-top: 80px;
+    }
+}
+.card {
+    width: 390px;
+    height: 202px;
+    padding:0 30px;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 80px;
+
+    &__image {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: 25px;
+        top: 0;
+        transform: translateY(-50%);
+        background: #000;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
+        color: #fff;
+        font-size: calc(14px + (30 - 14) * ((100vw - 375px) / (1920 - 375)));
+        line-height: calc(1.3em + (1.5 - 2.8) * ((100vw - 375px)/(1920 - 375)));
+    }
+
+    &__readMore {
+        font-weight: 500;
+        color: #fff;
+        background: #74CD4B;
+        padding: 12px 26px;
+        cursor: pointer;
+        font-size: calc(14px + (25 - 14) * ((100vw - 375px) / (1920 - 375)));
+        line-height: calc(1.3em + (1.5 - 2.2) * ((100vw - 375px)/(1920 - 375)));
+    }
+    @media (max-width:1350px) {
+        width: 290px;
+        height: 141px;
+        padding:0 20px;
+        margin-top: 60px;
+        &__image {
+            width: 74px;
+            height: 74px;
+        }
+        &__readMore {
+            padding: 8px 14px;
+        }
+    }
+    @media (max-width:1050px) {
+        width: 30%;
+        height: 121px;
+        padding:0 18px;
+        margin-top: 40px;
+        &__image {
+            width: 54px;
+            height: 54px;
+        }
+        &__readMore {
+            padding: 6px 11px;
+        }
+    }
+    @media (max-width:700px) {
+        width: 45%;
+        margin-top: 35px;
+    }
+    @media (max-width:450px) {
+        width: 100%;
+    }
+}

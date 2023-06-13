@@ -1,0 +1,136 @@
+.reason {
+    margin-top: 114px;
+    background: url(../../images/dots_black.svg) no-repeat;
+    background-position: left top bottom;
+    background-size: 37%;
+    padding: 111px 0 62px 0;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 40% 50%;
+        grid-gap: 80px;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__card{
+        display: flex;
+        border-bottom: 1px solid #000;
+        padding:20px 0;
+        gap: 80px;
+    }
+    &__title{
+        white-space: nowrap;
+        font-weight: 500;
+        color: #000;
+        font-size: calc(13px + (30 - 13) * ((100vw - 375px) / (1700 - 375)));
+        line-height: calc(1.5em + (1.5 - 2.8) * ((100vw - 375px)/(1700 - 375)));
+    }
+
+    &__text{        
+        font-weight: 400;
+        color: #000;
+        font-size: calc(12px + (22 - 12) * ((100vw - 375px) / (1920 - 375)));
+        line-height: calc(1.5em + (1.5 - 2) * ((100vw - 375px)/(1920 - 375)));
+        overflow: 'hidden' !important;
+        text-overflow: 'ellipsis' !important;
+        display: '-webkit-box' !important;
+        -webkit-box-orient: 'vertical' !important;
+        -webkit-line-clamp: 3 !important;
+        
+    }
+    @media (max-width:1250px) {
+        margin-top: 90px;
+        padding-top: 45px;
+        &__container {
+            grid-template-columns: 45% 55%;
+            grid-gap: 40px;
+        }
+        &__card{
+            gap: 40px;
+        }
+    }
+    @media (max-width:1050px) {
+        margin-top: 70px;
+        &__container {
+            grid-gap: 30px;
+        }
+        &__card{
+            gap: 30px;
+            padding: 10px;
+        }
+        &__title{
+            margin-bottom: 0;
+        }
+        &__text{
+            // font-size: 12px;
+        }
+    }
+    @media (max-width:850px) {
+        margin-top: 50px;
+        &__container {
+            grid-template-columns: 40% 55%;
+            grid-gap: 24px;
+        }
+        &__card{
+            padding:12px 0;
+            gap: 24px;
+        }
+        &__title{
+            font-size: 13px;
+        }
+        &__text{
+            font-size: 12px;
+        }
+    }
+    @media (max-width:700px) {
+        margin-top: 40px;
+        background-size: 95% 40%;
+        padding-top: 60px;
+        padding-bottom: 0;
+        background: url(../../images/dots_bg_mobile.png) no-repeat;
+        &__container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 40px;
+        }
+        &__card{
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        &__title{
+            font-size: 14px;
+        }
+        &__text{
+            font-size: 14px;
+        }
+        &__image{
+            max-height: 450px;
+        }
+    }
+    @media (max-width:650px) {
+        background-size: 100% 40%;
+        background-position: top;
+        &__container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        &__card{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @media (max-width:450px) {
+        background-size: 95% 35%;
+    }
+}
